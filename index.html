@@ -160,94 +160,72 @@
     </section> <!-- end of section -->
 
     <!-- contact section -->
-    <section class="section" id="contact">
-        <div class="container text-center">
-            <p class="section-subtitle">How can you communicate?</p>
-            <h6 class="section-title mb-5">Contact Me</h6>
-            <!-- contact form -->
-            <form class="contact-form col-md-10 col-lg-8 m-auto">
-                <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <input type="text" name="name" size="50" class="form-control" placeholder="Your Name" required>                 
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <input type="text" name="email" class="form-control" placeholder="Enter Email" requried>                 
-                    </div>
-                    <div class="form-group col-sm-12">
-                        <textarea name="message" id="comment" rows="6" class="form-control" placeholder="Write Something" requried></textarea>
-                    </div>
-                    <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
-                    </div>
+
+<section class="section" id="contact">
+    <div class="container text-center">
+        <p class="section-subtitle">How can you communicate?</p>
+        <h6 class="section-title mb-5">Contact Me</h6>
+        <!-- contact form -->
+        <form class="contact-form col-md-10 col-lg-8 m-auto">
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    <input type="text" name="name" size="50" class="form-control" placeholder="Your Name" required>
                 </div>
-            </form>
-            
-            <div id="success-message"></div>
-            <script>
-                const form = document.querySelector('.contact-form');
-                form.addEventListener('submit', function(event) {
-                  event.preventDefault();
+                <div class="form-group col-sm-6">
+                    <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group col-sm-12">
+                    <textarea name="message" id="comment" rows="6" class="form-control" placeholder="Write Something" required></textarea>
+                </div>
+                <div class="form-group col-sm-12 mt-3">
+                    <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                </div>
+            </div>
+        </form>
 
-                  const name = form.elements.name.value;
-                  const email = form.elements.email.value;
-                  const message = form.elements.message.value;
+        <div id="success-message"></div>
+    </div>
+</section>
 
-                  // Create an object with the form data
-                  const formData = {
-                    name: name,
-                    email: email,
-                    message: message
-                  };
+<script>
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-                  // Send the form data to the backend API
-                  fetch('https://techboyraju-api.onrender.com', {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                  })
-                  .then(response => {
-                    if (response.ok) {
-                      document.getElementById('success-message').textContent = 'Mail submitted successfully!';
-                      form.reset();
-                    } else {
-                        document.getElementById('success-message').textContent = 'Failed to send !';
-                    }
-                  })
-                  .catch(error => {
-                    // console.log('Error sending form data:', error);
-                    document.getElementById('success-message').textContent = error';
-                  });
-                });
-            </script>
+        const name = form.elements.name.value;
+        const email = form.elements.email.value;
+        const message = form.elements.message.value;
 
-            <!-- <script>
-              const form = document.querySelector('.contact-form');
-              const successMessage = document.querySelector('#success-message');
-              
-              form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const formData = new FormData(form);
-                fetch('https://techboyraju-api.onrender.com', {
-                  method: 'POST',
-                  body: formData
-                })
-                .then(response => {
-                    console.log(response)
-                })
-                .then(data => {
-                  console.log(data)
-                  successMessage.innerHTML = data.message;
-                  form.reset();
-                })
-                .catch(error => {
-                  successMessage.innerHTML = 'An error occurred while submitting the form.'+error;
-                  console.error(error);
-                });
-              });
-            </script> -->
+        // Create an object with the form data
+        const formData = {
+            name: name,
+            email: email,
+            message: message
+        };
 
+        // Send the form data to the backend API
+        fetch('https://techboyraju-api.onrender.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('success-message').textContent = 'Mail submitted successfully!';
+                    form.reset();
+                } else {
+                    document.getElementById('success-message').textContent = 'Failed to send!';
+                }
+            })
+            .catch(error => {
+                document.getElementById('success-message').textContent = 'Error sending form data: ' + error;
+            });
+    });
+</script>
+
+    
         </div>
     </section>
 
