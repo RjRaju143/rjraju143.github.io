@@ -209,23 +209,17 @@
                   })
                   .then(response => {
                     if (response.ok) {
-                      // Successful API response
-                      console.log('Form data sent successfully');
-                      // Optionally display a success message to the user
-                      document.getElementById('success-message').textContent = 'Form submitted successfully!';
-                      // Clear the form fields
+                      document.getElementById('success-message').textContent = 'Mail submitted successfully!';
                       form.reset();
                     } else {
-                      // Error in API response
-                      console.log('Error sending form data');
+                        document.getElementById('success-message').textContent = 'Failed to send !';
                     }
                   })
                   .catch(error => {
-                    // Error in API request
-                    console.log('Error sending form data:', error);
+                    // console.log('Error sending form data:', error);
+                    document.getElementById('success-message').textContent = error';
                   });
                 });
-
             </script>
 
             <!-- <script>
