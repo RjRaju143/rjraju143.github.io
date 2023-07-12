@@ -68,7 +68,7 @@
                     <p class="section-subtitle">Who Am I ?</p>
                     <h2 class="section-title mb-3">About Me</h2>
                     <p>
-                    <ul>
+                    <ul class="my-summary">
                         <li><b>Server Administrator | Developer | CTF Player </b></li>
                         <li>I make CTF & hacking videos. You can check out my videos on <a style="color: rgb(255, 0, 34);" target="_blank" href="http://bitly.ws/wuzf">YouTube</a> that cover Capture the Flag videos, and other cool stuff. If you want to hang out with a cool group of CTF players & hackers, come join the party! Check out my Profile on <a style="color: rgb(255, 0, 34);" target="_blank" href="http://bitly.ws/wuyR">TryHackMe</a>. In the meantime, follow me on <a style="color: rgb(255, 0, 34);" target="_blank" href="https://bit.ly/3BxxcGF">Instagram</a></li>
                         <li>I am also available for freelance</li>
@@ -213,18 +213,17 @@
         })
             .then(response => {
                 if (response.ok) {
-                    document.getElementById('success-message').textContent = 'Mail submitted successfully!';
+                    document.getElementById('success-message').textContent = 'Mail sent successfully!';
                     form.reset();
                 } else {
-                    document.getElementById('success-message').textContent = 'Failed to send!';
+                    document.getElementById('success-message').textContent = 'Mail sent failed !';
                 }
             })
             .catch(error => {
-                document.getElementById('success-message').textContent = 'Error sending form data: ' + error;
+                document.getElementById('success-message').textContent = 'Error sending mail : ' + error;
             });
     });
 </script>
-
     
         </div>
     </section>

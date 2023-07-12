@@ -12185,6 +12185,9 @@ pre .code {
             flex-direction: column;
     text-align: center;
   }
+  .my-summary{
+    text-align: left;
+  }
   .about-img-holder {
     max-width: 220px;
     min-width: 100%;
@@ -12220,3 +12223,7 @@ pre .code {
 .section-lg {
   padding: 100px 0 !important;
 }
+
+
+
+
