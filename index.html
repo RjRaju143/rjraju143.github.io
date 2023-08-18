@@ -210,7 +210,7 @@
                 </div>
             </form>
 
-            <div id="success-message"></div>
+            <div id="responce-message"></div>
         </div>
     </section>
 
@@ -223,14 +223,12 @@
             const email = form.elements.email.value;
             const message = form.elements.message.value;
 
-            // Create an object with the form data
             const formData = {
                 name: name,
                 email: email,
                 message: message
             };
 
-            // Send the form data to the backend API
             fetch('https://techboyraju-api.onrender.com', {
                 method: 'POST',
                 headers: {
@@ -238,18 +236,29 @@
                 },
                 body: JSON.stringify(formData)
             })
-                .then(response => {
-                    if (response.ok) {
-                        document.getElementById('success-message').textContent = 'Mail sent successfully!';
-                        form.reset();
-                    } else {
-                        document.getElementById('success-message').textContent = 'Mail sent failed !';
-                    }
-                })
-                .catch(error => {
-                    document.getElementById('success-message').textContent = 'Error sending mail : ' + error;
-                });
+            .then(response => response.json())  // Parse the response as JSON
+            .then(data => {
+                if (data.success) {
+                    showResponseMessage('Mail sent successfully!');
+                    form.reset();
+                } else {
+                    showResponseMessage('Mail sent failed!');
+                }
+            })
+            .catch(error => {
+                showResponseMessage('Error sending mail: ' + error);
+            });
         });
+
+        function showResponseMessage(message) {
+            const responseMessage = document.getElementById('response-message');
+            responseMessage.textContent = message;
+
+            setTimeout(() => {
+                responseMessage.textContent = '';
+            }, 3000);
+        }
+
     </script>
 
     </div>
