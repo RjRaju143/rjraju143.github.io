@@ -239,7 +239,7 @@
             })
             .then(response => response.json())  // Parse the response as JSON
             .then(data => {
-                if (data.success) {
+                if (data) {
                     showResponseMessage('Mail sent successfully!');
                     form.reset();
                 } else {
