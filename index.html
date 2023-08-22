@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,9 +12,7 @@
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
 </head>
-
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
@@ -42,7 +39,6 @@
         </div>
     </nav>
     <!-- End of Page Navbar -->
-
     <!-- page header -->
     <header id="home" class="header">
         <div class="overlay"></div>
@@ -52,11 +48,10 @@
                 <span class="down">I am Bangarraju</span>
             </h1>
             <!-- <p class="header-subtitle">WEB DEVELOPER</p> -->
-            <p class="header-subtitle">Associate Software Engineer</p>
+            <p class="header-subtitle">Software Engineer</p>
         </div>
     </header>
     <!-- end of page header -->
-
     <!-- about section -->
     <section class="section pt-0" id="about">
         <!-- container -->
@@ -86,7 +81,6 @@
                         <li>Having good knowledge in Nodejs, Linux, Docker, AWS (EC2, S3)</li>
                     </ul>
                     </p>
-
                     <a href="/resuma.pdf">
                         <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
                     </a>
@@ -94,7 +88,6 @@
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
     </section> <!-- end of about section -->
-
     <!-- portfolio section -->
     <section class="section" id="portfolio">
         <div class="container text-center">
@@ -165,7 +158,6 @@
             </div><!-- end of row -->
         </div><!-- end of container -->
     </section> <!-- end of portfolio section -->
-
     <!-- section -->
     <section class="section-sm bg-primary">
         <!-- container -->
@@ -184,9 +176,7 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </section> <!-- end of section -->
-
     <!-- contact section -->
-
     <section class="section" id="contact">
         <div class="container text-center">
             <p class="section-subtitle">How can you communicate?</p>
@@ -209,27 +199,21 @@
                     </div>
                 </div>
             </form>
-
             <div id="response-message"></div>
-
         </div>
     </section>
-
     <script>
         const form = document.querySelector('.contact-form');
         form.addEventListener('submit', function (event) {
             event.preventDefault();
-
             const name = form.elements.name.value;
             const email = form.elements.email.value;
             const message = form.elements.message.value;
-
             const formData = {
                 name: name,
                 email: email,
                 message: message
             };
-
             fetch('https://techboyraju-api.onrender.com', {
                 method: 'POST',
                 headers: {
@@ -250,21 +234,16 @@
                 showResponseMessage('Error sending mail: ' + error);
             });
         });
-
         function showResponseMessage(message) {
             const responseMessage = document.getElementById('response-message');
             responseMessage.textContent = message;
-
             setTimeout(() => {
                 responseMessage.textContent = '';
             }, 3000);
         }
-
     </script>
-
     </div>
     </section>
-
     <!-- footer -->
     <div class="container">
         <footer class="footer">
@@ -279,17 +258,14 @@
             </div>
         </footer>
     </div> <!-- end of page footer -->
-
     <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
     <!-- bootstrap 3 affix -->
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
-
 </body>
-
 </html>
+
+
