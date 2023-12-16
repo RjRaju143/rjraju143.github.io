@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +12,15 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
+    <script>
+        async function ping() {
+            const data = await fetch('https://techboyraju-api.onrender.com')
+            console.log(data.status)
+        }
+        ping()
+    </script>
 </head>
+
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
@@ -221,18 +230,18 @@
                 },
                 body: JSON.stringify(formData)
             })
-            .then(response => response.json())  // Parse the response as JSON
-            .then(data => {
-                if (data) {
-                    showResponseMessage('Mail sent successfully!');
-                    form.reset();
-                } else {
-                    showResponseMessage('Mail sent failed!');
-                }
-            })
-            .catch(error => {
-                showResponseMessage('Error sending mail: ' + error);
-            });
+                .then(response => response.json())  // Parse the response as JSON
+                .then(data => {
+                    if (data) {
+                        showResponseMessage('Mail sent successfully!');
+                        form.reset();
+                    } else {
+                        showResponseMessage('Mail sent failed!');
+                    }
+                })
+                .catch(error => {
+                    showResponseMessage('Error sending mail: ' + error);
+                });
         });
         function showResponseMessage(message) {
             const responseMessage = document.getElementById('response-message');
@@ -266,6 +275,5 @@
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
 </body>
+
 </html>
-
-
