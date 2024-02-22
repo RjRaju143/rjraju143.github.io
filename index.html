@@ -13,11 +13,10 @@
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
     <script>
-        async function ping() {
+        (async function(){
             const data = await fetch('https://techboyraju-api.onrender.com')
-            console.log(data.status)
-        }
-        ping()
+                console.log(data.status)
+        })()
     </script>
 </head>
 
