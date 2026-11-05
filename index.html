@@ -1,9 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; URL='https://rjraju143.vercel.app'" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bangarraju Indana – DevOps Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f6f2;--panel:#fff;--side:#f3eefe;--ink:#14151a;--mute:#555a66;--line:#d9d9e0;--hl:#e3d7fb;--pur:#6d3fd6;--blue:#2f5fe0;--ora:#d4571c;--teal:#1f8a78;--pink:#c4245f;--slate:#454c5c;--green:#1c9a4b;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101116;--panel:#171922;--side:#1d1a2e;--ink:#f1f1f5;--mute:#a2a7b5;--line:#2d303c;--hl:#3b2d68;--pur:#a98bff;--blue:#7b9bff;--ora:#ff8a50;--teal:#4fd1b9;--pink:#ff6b9d;--slate:#aab1c4;--green:#4ade80}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.5}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+nav,section,footer{position:relative;z-index:1}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) max(18px,calc((100% - 1080px)/2)) 12px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav b{font-size:17px}nav b i{font-style:normal;color:var(--pur)}
+nav div a{color:var(--mute);text-decoration:none;font-size:14px;margin-left:18px}nav div a:hover{color:var(--pur)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.lab{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--pur);text-transform:uppercase;display:flex;align-items:center;gap:10px;margin:0 0 6px}
+.lab:after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font-size:clamp(26px,4.5vw,38px);margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0 0 22px;max-width:60ch}
+section{padding:46px 0}
+.hl{background:linear-gradient(transparent 58%,var(--hl) 58%) no-repeat 0 0/0 100%;transition:background-size .9s ease .3s}.hl.on{background-size:100% 100%}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;padding-top:50px}
+.hi{font-family:'JetBrains Mono',monospace;color:var(--mute);margin:0 0 6px}
+h1{font-size:clamp(40px,8vw,76px);line-height:1;margin:0 0 12px;letter-spacing:-.03em}
+h1 .w{display:inline-block;margin-right:.22em}
+.role{font-size:clamp(18px,3vw,24px);min-height:1.5em;color:var(--pur);font-weight:500}
+.role:after{content:"|";animation:bl 1s steps(1) infinite;margin-left:2px}@keyframes bl{50%{opacity:0}}
+.lead{color:var(--mute);max-width:52ch;margin:14px 0 20px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{padding:11px 18px;border-radius:9px;text-decoration:none;font-weight:500;border:1.5px solid var(--ink);color:var(--ink);transition:transform .2s,background .2s}
+.btn.p{background:var(--pur);border-color:var(--pur);color:#fff}.btn:hover{transform:translateY(-3px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center}
+.stat b{display:block;font-size:26px;line-height:1.1;color:var(--pur)}.stat span{font-size:11.5px;color:var(--mute)}
+.term{background:#12131a;border-radius:12px;box-shadow:0 18px 50px rgba(60,30,140,.28);overflow:hidden;color:#d8dae6}
+.term .bar{display:flex;gap:7px;padding:11px 14px;background:#1c1e2a;align-items:center}.term .bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.term .bar i:nth-child(2){background:#febc2e}.term .bar i:nth-child(3){background:#28c840}
+.term .bar span{margin-left:8px;font-size:12px;color:#8a8fa3}
+#tb{padding:16px;min-height:250px;font-size:13px;line-height:1.7;white-space:pre-wrap}
+#tb .p{color:#4fd1b9}#tb .o{color:#9aa0b8}#tb u{display:inline-block;width:7px;height:14px;background:#d8dae6;vertical-align:-2px;animation:bl 1s steps(1) infinite}
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 8px 18px}
+.st{text-align:center;position:relative}
+.dot{width:42px;height:42px;border-radius:50%;border:2px solid var(--line);margin:0 auto 8px;display:grid;place-items:center;background:var(--panel);position:relative;z-index:1;transition:all .3s;color:#fff;font-weight:700}
+.st:not(:last-child):before{content:"";position:absolute;top:20px;left:50%;width:100%;height:2px;background:var(--line)}
+.st:not(:last-child):after{content:"";position:absolute;top:20px;left:50%;width:0;height:2px;background:var(--green);transition:width .7s}
+.st.ok:after{width:100%}
+.st.run .dot{border-color:var(--blue);animation:rp 1s infinite}@keyframes rp{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--blue) 50%,transparent)}100%{box-shadow:0 0 0 14px transparent}}
+.st.ok .dot{background:var(--green);border-color:var(--green)}.st.ok .dot:after{content:"✓"}
+.st b{display:block;font-size:14px}.st span{font-size:11px;color:var(--mute)}
+.pst{display:flex;justify-content:space-between;margin-top:14px;font-size:13px;color:var(--mute)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.box h3{margin:0 0 10px;font-size:16px;display:flex;justify-content:space-between}.box h3 em{font-style:normal;color:var(--green);font-size:12px}
+#pods{display:grid;grid-template-columns:repeat(16,1fr);gap:5px}
+#pods i{aspect-ratio:1;border-radius:3px;background:var(--green);opacity:.8;animation:pp 3s ease-in-out infinite}
+@keyframes pp{50%{opacity:.4}}#pods i.rs{background:#f5a623;opacity:1}
+svg.sp{width:100%;height:80px;display:block}.sp path{fill:none;stroke:var(--pur);stroke-width:2}.sp .f{fill:var(--hl);stroke:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.gc{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:12px;padding:16px}
+.gc h3{margin:0 0 8px;font-size:15px;color:var(--c);display:flex;align-items:center;gap:8px}.gc h3 b{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mute)}
+.tr{display:flex;gap:10px;padding:6px 0;align-items:flex-start}
+.ic{width:30px;height:30px;border-radius:8px;background:var(--c);color:#fff;display:grid;place-items:center;font-weight:700;font-size:11px;flex:none;transition:transform .25s}.tr:hover .ic{transform:rotate(-8deg) scale(1.15)}
+.tr b{font-size:15px}.tr p{margin:0;color:var(--mute);font-size:13.5px}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
+.job{position:relative;margin-bottom:26px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+.job:before{content:"";position:absolute;left:-33px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--pur);box-shadow:0 0 0 5px var(--hl)}
+.job h3{margin:0;font-size:19px}.job .mono{font-size:12px;color:var(--mute)}
+.job ul{padding-left:18px;margin:10px 0 0}.job li{margin:6px 0}
+.chipset{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.chipset span{font-family:'JetBrains Mono',monospace;font-size:11.5px;background:var(--side);color:var(--pur);padding:3px 9px;border-radius:99px}
+footer{text-align:center;padding:50px 18px 60px;background:var(--side);border-top:1px solid var(--line)}
+footer h2{margin-bottom:14px}footer .btns{justify-content:center}footer p{color:var(--mute)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease var(--d,0s),transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}.rv.in{opacity:1;transform:none}
+.w{opacity:0;transform:translateY(.8em) rotate(5deg);animation:wd .8s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d)}@keyframes wd{to{opacity:1;transform:none}}
+@media(max-width:800px){.hero,.two{grid-template-columns:1fr}nav div a:nth-child(n+4){display:none}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){#pods i{animation:none}}
+</style>
 </head>
 <body>
-  <a href="https://https://rjraju143.vercel.app"></a>
+<canvas id="bg" aria-hidden="true"></canvas>
+<nav><b>bangarraju<i>.dev</i></b><div><a href="#pipeline">How I ship</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></nav>
+
+<section class="wrap hero" id="home">
+<div>
+<p class="hi">$ whoami</p>
+<h1><span class="w" style="--d:.1s">Bangarraju</span><span class="w hl" style="--d:.25s">Indana</span></h1>
+<div class="role" id="role"></div>
+<p class="lead rv">DevOps Engineer with 4+ years automating cloud infrastructure on AWS, Kubernetes, Docker and Terraform. I build CI/CD pipelines with Jenkins and GitHub Actions, watch everything with Datadog, and make releases fast, reliable and boring.</p>
+<div class="btns rv"><a class="btn p" href="#contact">Get in touch</a><a class="btn" href="#experience">See my work</a></div>
+<div class="stats">
+<div class="stat rv"><b>4+</b><span>years in DevOps</span></div>
+<div class="stat rv"><b>25%</b><span>faster builds</span></div>
+<div class="stat rv"><b>35%</b><span>more reliable</span></div>
+<div class="stat rv"><b>30%</b><span>less manual work</span></div>
+</div>
+</div>
+<div class="term rv"><div class="bar"><i></i><i></i><i></i><span class="mono">bangarraju@prod: ~</span></div><div id="tb" class="mono"></div></div>
+</section>
+
+<section class="wrap" id="pipeline">
+<p class="lab">How I ship</p>
+<h2>From commit to production, automated.</h2>
+<p class="sub">Every push runs the same pipeline: build the image, test it, scan it, then roll it out with zero hand-holding.</p>
+<div class="pipe rv" id="pipe"></div>
+<div class="pst mono rv"><span id="pst">Running…</span><span>Jenkins · GitHub Actions · Terraform · EKS</span></div>
+<div class="two">
+<div class="box rv"><h3>Cluster health <em id="ph">● all pods healthy</em></h3><div id="pods"></div></div>
+<div class="box rv"><h3>Datadog · p95 latency <em>↓ improving</em></h3>
+<svg class="sp" viewBox="0 0 300 80" preserveAspectRatio="none"><path class="f" id="sf"/><path id="sl"/></svg></div>
+</div>
+</section>
+
+<section class="wrap" id="skills">
+<p class="lab">Skills</p>
+<h2 id="sk-t">Tools, grouped by the job they do.</h2>
+<p class="sub">Most of them do one job. Here is what each one is actually for.</p>
+<div class="grid" id="skills-g"></div>
+</section>
+
+<section class="wrap" id="experience">
+<p class="lab">Experience</p>
+<h2>Where I’ve shipped.</h2>
+<p class="sub">Two roles, one habit: automate it.</p>
+<div class="tl">
+<div class="job rv"><h3>DevOps Engineer / Backend Developer</h3>
+<div class="mono">Oquis – High-Performance Data Synchronization Framework · Absolin · Jan 2024 – Oct 2026</div>
+<ul><li>Built Linux Docker and Docker Compose stacks on AWS EC2, scripted provisioning with Bash and Terraform, and added GitHub CI pipelines that cut build times 25%.</li>
+<li>Tuned monitoring and performance across Linux and Windows servers with Datadog, SSH/RDP and Python scripts, improving reliability 35%.</li>
+<li>Integrated Python MLOps workflows into Jenkins, automating model training and containerized deployment on EKS for Earth observation analytics.</li>
+<li>Covered all microservices with Datadog monitoring, embedded DevSecOps scans in CI/CD and tuned database pipelines for high availability.</li></ul>
+<div class="chipset"><span>AWS EC2</span><span>EKS</span><span>Terraform</span><span>Docker</span><span>Jenkins</span><span>Datadog</span><span>Python</span></div></div>
+<div class="job rv"><h3>DevOps Engineer</h3>
+<div class="mono">Automation of Background Verification Reports · DataFlow Group · Feb 2022 – Dec 2023</div>
+<ul><li>Ran Java/Tomcat services in Linux Docker containers and automated image builds with GitHub Actions and Bash, raising deployment stability 20%.</li>
+<li>Wrote PowerShell and Bash automation for host maintenance, scheduled with cron and Task Scheduler, cutting manual effort 30%.</li>
+<li>Set up SSH key access and RDP hardening with audit logging, reducing unauthorized access incidents.</li></ul>
+<div class="chipset"><span>Docker</span><span>GitHub Actions</span><span>Bash</span><span>PowerShell</span><span>Linux</span></div></div>
+</div>
+<div class="two">
+<div class="box rv"><h3>Education</h3><p><b>MCA</b>, Andhra University · 2023–2025</p><p><b>B.Sc Computer Science (MPCS)</b>, Adarsh Degree College, Andhra University · 2021</p></div>
+<div class="box rv"><h3>Certifications</h3><p>TryHackMe 2021–2023: Web Fundamentals, Intro to Cyber Security, Jr. Penetration Tester, Pre Security, Cyber Defense, Complete Beginner, Offensive Pentesting, CompTIA Pentest+</p></div>
+</div>
+</section>
+
+<footer id="contact">
+<h2>Let’s automate something.</h2>
+<p>Based in Visakhapatnam, Andhra Pradesh, India.</p>
+<div class="btns"><a class="btn p" href="mailto:bangarraju1152@gmail.com">bangarraju1152@gmail.com</a><a class="btn" href="tel:+917702481430">+91 77024 81430</a><a class="btn" href="https://www.linkedin.com/in/bangarraju-indana-61364b200" target="_blank" rel="noopener">LinkedIn</a></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const G=[
+{n:"Cloud & IaC",c:"--blue",t:[["AWS","AW","EC2, EKS and VPC: where everything runs."],["Azure","Az","Second cloud for multi-environment deployments."],["GCP","GC","Third cloud, same patterns."],["Terraform","Tf","Your infrastructure, written as code."],["Pulumi","Pu","Infrastructure as code in real programming languages."]]},
+{n:"Run & Serve",c:"--teal",t:[["Docker","Dk","Packages your app so it runs the same everywhere."],["Kubernetes","K8","Runs and scales containers across many machines."],["Nginx","Nx","Reverse proxy, load balancer and static file server."],["Windows IIS","IS","Hosts web apps on Windows servers."],["Linux","Lx","The server OS, administered over SSH."]]},
+{n:"Ship",c:"--pink",t:[["GitHub Actions","GA","Tests, builds and deploys on every push."],["Jenkins","Jk","Pipelines for builds and MLOps deployment."],["GitLab","GL","CI/CD and source hosting."]]},
+{n:"Watch",c:"--slate",t:[["Datadog","Dd","Metrics, logs and alerts across every microservice."]]},
+{n:"Store data",c:"--ora",t:[["PostgreSQL","Pg","Relational data you can’t afford to lose, tuned for speed."],["MongoDB","Mg","Flexible document storage."]]},
+{n:"Automate",c:"--pur",t:[["Python","Py","Scripts and MLOps workflows."],["Bash & PowerShell","Sh","Host maintenance on Linux and Windows."],["Node.js","Js","Automation and backend services."],["N8N & Agentic AI","AI","Workflow automation with AI agents."]]}];
+$('#skills-g').innerHTML=G.map(g=>`<div class="gc rv" style="--c:var(${g.c})"><h3>${g.n}<b>${g.t.length}</b></h3>${g.t.map(t=>`<div class="tr"><span class="ic">${t[1]}</span><div><b>${t[0]}</b><p>${t[2]}</p></div></div>`).join('')}</div>`).join('');
+$('#sk-t').textContent=G.reduce((a,g)=>a+g.t.length,0)+' tools, grouped by the job they do.';
+// pipeline
+const ST=[["Commit","Git"],["Build","Docker"],["Test","Jenkins"],["Scan","DevSecOps"],["Deploy","EKS"]];
+$('#pipe').innerHTML=ST.map(s=>`<div class="st"><div class="dot"></div><b>${s[0]}</b><span>${s[1]}</span></div>`).join('');
+async function pipe(){const S=$$('.st');if(still){S.forEach(s=>s.classList.add('ok'));$('#pst').textContent='Deployed ✓';return}
+for(;;){S.forEach(s=>s.className='st');$('#pst').textContent='Running…';for(const s of S){s.classList.add('run');await sleep(850);s.className='st ok'}$('#pst').textContent='Deployed ✓';await sleep(2600)}}
+// pods
+const pg=$('#pods');for(let i=0;i<48;i++)pg.insertAdjacentHTML('beforeend',`<i style="animation-delay:${(Math.random()*3).toFixed(2)}s"></i>`);
+if(!still)setInterval(async()=>{const p=pg.children[Math.random()*48|0];p.classList.add('rs');$('#ph').textContent='● 1 pod restarting';await sleep(1500);p.classList.remove('rs');$('#ph').textContent='● all pods healthy'},3200);
+// sparkline
+(function(){let v=[];for(let i=0;i<30;i++)v.push(55-i*.9+Math.random()*14);
+const d=()=>{const pts=v.map((y,i)=>[i*(300/29),Math.max(6,Math.min(74,y))]);const l='M'+pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' L');$('#sl').setAttribute('d',l);$('#sf').setAttribute('d',l+' L300,80 L0,80Z')};d();
+if(!still)setInterval(()=>{v.shift();v.push(22+Math.random()*16);d()},700);})();
+// terminal
+async function term(){const b=$('#tb');const L=[['terraform apply -auto-approve','Apply complete! Resources: 14 added.'],['docker compose up -d','✔ 4 containers started'],['kubectl get pods','api-7f9c4     1/1   Running\nworker-5d2b9  1/1   Running'],['git push origin main','✔ GitHub Actions: pipeline passed']];
+if(still){b.innerHTML=L.map(l=>`<div><span class="p">$</span> ${l[0]}</div><div class="o">${l[1]}</div>`).join('');return}
+for(;;){b.innerHTML='';for(const l of L){const d=document.createElement('div');d.innerHTML='<span class="p">$</span> <span></span><u></u>';b.appendChild(d);const s=d.children[1];for(const ch of l[0]){s.textContent+=ch;await sleep(36)}d.lastChild.remove();await sleep(250);const o=document.createElement('div');o.className='o';o.textContent=l[1];b.appendChild(o);await sleep(700)}await sleep(2600)}}
+async function roles(){const el=$('#role'),W=['DevOps Engineer','Cloud & Kubernetes','CI/CD Automation','Linux & Observability'];if(still){el.textContent=W[0];return}
+for(let i=0;;i=(i+1)%W.length){for(const c of W[i]){el.textContent+=c;await sleep(70)}await sleep(1400);while(el.textContent){el.textContent=el.textContent.slice(0,-1);await sleep(35)}await sleep(300)}}
+pipe();term();roles();
+// reveal + count
+function count(b){const tx=b.dataset.t,n=parseInt(tx),suf=tx.replace(/\d+/,''),t0=performance.now();(function s(t){const k=Math.min((t-t0)/1300,1);b.textContent=Math.round(n*(1-Math.pow(1-k,3)))+suf;if(k<1)requestAnimationFrame(s)})(t0)}
+if(still){$$('.hl').forEach(e=>e.classList.add('on'));$$('.rv').forEach(e=>e.classList.add('in'))}
+else{setTimeout(()=>$('h1 .hl').classList.add('on'),700);
+$$('.stat b').forEach(b=>{b.dataset.t=b.textContent;b.textContent='0'+b.textContent.replace(/\d+/,'')});
+const cnt=new Map();$$('.rv').forEach(e=>{const p=e.parentNode,i=cnt.get(p)||0;cnt.set(p,i+1);e.style.setProperty('--d',Math.min(i,6)*.08+'s')});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(!x.isIntersecting)return;const e=x.target;e.classList.add('in');io.unobserve(e);const b=e.querySelector('.stat b')||(e.matches('.stat b')?e:null);if(e.classList.contains('stat'))count(e.querySelector('b'))}),{threshold:.12});
+$$('.rv').forEach(e=>io.observe(e));}
+// three.js network
+(function(){try{if(!window.THREE)return;
+const R=new THREE.WebGLRenderer({canvas:$('#bg'),alpha:true,antialias:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(55,1,.1,100);C.position.z=16;const net=new THREE.Group();S.add(net);
+const P=[],N=120;for(let i=0;i<N;i++){const r=6+Math.random()*10,a=Math.random()*6.283,b=Math.acos(2*Math.random()-1);P.push(new THREE.Vector3(r*Math.sin(b)*Math.cos(a),r*Math.sin(b)*Math.sin(a)*.8,r*Math.cos(b)))}
+net.add(new THREE.Points(new THREE.BufferGeometry().setFromPoints(P),new THREE.PointsMaterial({color:0x7b5cff,size:.14,transparent:true,opacity:.8})));
+const E=[],lp=[];for(let i=0;i<N;i++)for(let j=i+1;j<N;j++)if(P[i].distanceTo(P[j])<4.2){E.push([i,j]);lp.push(P[i],P[j])}
+net.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(lp),new THREE.LineBasicMaterial({color:0x7b5cff,transparent:true,opacity:.2})));
+const cols=[0x1fb89c,0xe0467c,0x2f5fe0,0xff8a50],K=[];for(let i=0;i<18;i++){const m=new THREE.Mesh(new THREE.SphereGeometry(.12,10,10),new THREE.MeshBasicMaterial({color:cols[i%4]}));net.add(m);K.push({m,e:E[Math.random()*E.length|0],t:Math.random(),s:.004+Math.random()*.008})}
+let mx=0,my=0,sy=0,t=0;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});addEventListener('scroll',()=>{sy=scrollY});
+const size=()=>{R.setSize(innerWidth,innerHeight,false);C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix()};addEventListener('resize',size);size();
+(function f(){t+=.01;net.rotation.y=t*.12+mx*.6;net.rotation.x=my*.4+t*.03+sy*.0004;
+K.forEach(k=>{k.t+=k.s;if(k.t>=1){k.t=0;k.e=E[Math.random()*E.length|0]}k.m.position.lerpVectors(P[k.e[0]],P[k.e[1]],k.t)});R.render(S,C);if(!still)requestAnimationFrame(f)})();
+}catch(e){console.error(e)}})();
+</script>
 </body>
 </html>
